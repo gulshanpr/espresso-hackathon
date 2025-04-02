@@ -1,0 +1,14 @@
+version: '2.2'
+services:
+  caff_node:
+    image: ghcr.io/espressosystems/nitro-espresso-integration/nitro-node@sha256:bf63374a00a5d6676ca39af79ac4b0f053128cb7438bcdaa746dba6656c12658
+    container_name: caff_node
+    ports:
+      - "8550:8547"
+      - "8551:8548"
+      - "8552:8549"
+    command: --conf.file /config/caff_node.json
+    volumes:
+      - ./config:/config
+      - ./wasm:/home/user/wasm/
+      - ./database:/home/user/.arbitrum
