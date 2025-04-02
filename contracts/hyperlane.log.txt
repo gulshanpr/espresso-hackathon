@@ -1,0 +1,100 @@
+yarn hyperlane core deploy
+yarn run v1.22.22
+$ /home/gulshan/all-codes/hackathons/espresso/contracts/node_modules/.bin/hyperlane core deploy
+Hyperlane CLI
+Hyperlane Core deployment
+_________________________
+? Select network type Testnet
+✔ Select chain to connect: espressoarbtest
+? Do you want to use an API key to verify on this (espressoarbtest) chain's block explorer no
+
+Deployment plan
+===============
+Transaction signer and owner of new contracts: 0x85a883834a23181dF19dA3ffAeeE2e3A21703457
+Deploying core contracts to network: espressoarbtest
+┌────────────────────────┬─────────────────────────┐
+│ (index)                │ Values                  │
+├────────────────────────┼─────────────────────────┤
+│ Name                   │ 'espressoarbtest'       │
+│ Display Name           │ 'Espressoarbtest'       │
+│ Chain ID               │ 421614                  │
+│ Domain ID              │ 99123                   │
+│ Protocol               │ 'ethereum'              │
+│ JSON RPC URL           │ 'http://127.0.0.1:8547' │
+│ Native Token: Symbol   │ 'ETH'                   │
+│ Native Token: Name     │ 'Ether'                 │
+│ Native Token: Decimals │ 18                      │
+└────────────────────────┴─────────────────────────┘
+Note: There are several contracts required for each chain, but contracts in your provided registries will be skipped.
+? Mailbox already exists at 0xcCd7E4faAA9EF66B29421B539120Bc6292217Ca1. Are you sure you want to deploy a new mailbox and overwrite existing registry artifacts?
+yes
+? Is this deployment plan correct? yes
+Running pre-flight checks for chains...
+✅ Espressoarbtest signer is valid
+✅ Chains are valid
+✅ Balances are sufficient
+🚀 All systems ready, captain! Beginning deployment...
+Deploying to espressoarbtest from 0x85a883834a23181dF19dA3ffAeeE2e3A21703457
+Deploying staticMerkleRootMultisigIsmFactory on espressoarbtest with constructor args ()...
+Pending 0x105b38ef9ade01386541c59bdd48ca418817117e2c10da59db6ef3ba68be4c44 (waiting 1 blocks for confirmation)
+Deploying staticMessageIdMultisigIsmFactory on espressoarbtest with constructor args ()...
+Pending 0x79299831ed919eafde5ca74b9af4171b435973d950f506fa82eea40e2759a908 (waiting 1 blocks for confirmation)
+Deploying staticAggregationIsmFactory on espressoarbtest with constructor args ()...
+Pending 0xe9a264559b48638fa3e221e27a6a7b71c40b0be59c70a22675efe62c80fb5f19 (waiting 1 blocks for confirmation)
+Deploying staticAggregationHookFactory on espressoarbtest with constructor args ()...
+Pending 0x7f26239a4969086f20dff0a61c922e37553b5c8ec7ef0c7b6b44941b3625c941 (waiting 1 blocks for confirmation)
+Deploying domainRoutingIsmFactory on espressoarbtest with constructor args ()...
+Pending 0x76f72e459d444383a1f16c3269b5f15962e59d8c791e72ac47db7651bce648cf (waiting 1 blocks for confirmation)
+Deploying staticMerkleRootWeightedMultisigIsmFactory on espressoarbtest with constructor args ()...
+Pending 0xfdf173bc294765bf0b3c95d56a98b526e759748d35e8bdfde00f35da4499b37b (waiting 1 blocks for confirmation)
+Deploying staticMessageIdWeightedMultisigIsmFactory on espressoarbtest with constructor args ()...
+Pending 0x751d3aa984ec057877acb6e0f44322422ca0230db851e1754d60d42eb17e6aae (waiting 1 blocks for confirmation)
+Successfully deployed contracts on espressoarbtest
+Deploying proxyAdmin on espressoarbtest with constructor args ()...
+Pending 0x6a8e8b0ed64d47cbbb4e1ac36127fcfdeefd9e947dc256c423ad955cfeb7ba00 (waiting 1 blocks for confirmation)
+Deploying mailbox on espressoarbtest with constructor args (99123)...
+Pending 0x2c512756d96a2a7186f849df0e863ed5707ee000b6e34a709a8629e8f939a64c (waiting 1 blocks for confirmation)
+Deploying TransparentUpgradeableProxy on espressoarbtest with constructor args (0x89D947d7B44dfA45bf2498bb5Eeb9038BCF1369E, 0x06CEa6f1fC84D9F70Ca7B4dAE7bbA079bCc9BFEB, 0x)...
+Pending 0x313244f2d26e186563376de2d332eb30d05d557e3207adddfdf4be4ac69ce8a8 (waiting 1 blocks for confirmation)
+Pending 0x51e2fc27fe8d1b7b3bac5b54da4fc1873e903967573bf16e90bca3b9c761565b (waiting 1 blocks for confirmation)
+Deploying merkleTreeHook on espressoarbtest with constructor args (0x1E8A840aa67849b7BBef248Ef3bA29aE31d7372e)...
+Pending 0xdeef909a2355a8d51f8023883f7e5adb1bcfecd91b943ec83f74306332b9d874 (waiting 1 blocks for confirmation)
+Pending 0x80a61b2f52d90900be2c44af61493acd62f28115e9b19c222f73fe6bb770b0b1 (waiting 1 blocks for confirmation)
+Deploying interchainAccountIsm on espressoarbtest with constructor args (0x1E8A840aa67849b7BBef248Ef3bA29aE31d7372e)...
+Pending 0x5031308bc9e0873a68789a457e8e9c985cec9a664b53096419f349b2cb6f4f3d (waiting 1 blocks for confirmation)
+Deploying proxyAdmin on espressoarbtest with constructor args ()...
+Pending 0x44ac58555e2e49fa27d4fea81da567f700909307c3560751e2f9b15713687211 (waiting 1 blocks for confirmation)
+Deploying interchainAccountRouter on espressoarbtest with constructor args (0x1E8A840aa67849b7BBef248Ef3bA29aE31d7372e)...
+Pending 0xde5977f21ac2f2e9541a1e814adc6736578b3b41dec2f4a20e95eb0dc370067c (waiting 1 blocks for confirmation)
+Pending 0xf533aafaa68f85a1e1332525fee4301c7b98112a766d9c3722a08f4b13530a9a (waiting 1 blocks for confirmation)
+Deploying TransparentUpgradeableProxy on espressoarbtest with constructor args (0x43FDC5bfc78DF80e6282506cb564BC6aD926dE7c, 0x0BeE62D24F7b4f2ebFd58FdF5F8944E60519d0FE, 0xc0c53b8b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000028142f0d3a924dc06bf9875c09350a2b1065fb9e00000000000000000000000085a883834a23181df19da3ffaeee2e3a21703457)...
+Pending 0xdb414334528a4dacab2e46166ed0e0a803528d639e464725175b4b221f63c0b6 (waiting 1 blocks for confirmation)
+Deploying validatorAnnounce on espressoarbtest with constructor args (0x1E8A840aa67849b7BBef248Ef3bA29aE31d7372e)...
+Pending 0xbe61a20310e8c7b69af45724e8405c66a9c9140db40c3cee28b7342acfc60c8b (waiting 1 blocks for confirmation)
+Deploying testRecipient on espressoarbtest with constructor args ()...
+Pending 0x321b1002d86198687a026eccc63a041ed605b4b525a3de9d5dfd9188024ef92a (waiting 1 blocks for confirmation)
+Sent tx 0xbea91a5aad79b52ff159d7269083da2ddf19d674eeb929fb4dca4aa660749c49
+Pending 0xbea91a5aad79b52ff159d7269083da2ddf19d674eeb929fb4dca4aa660749c49 (waiting 1 blocks for confirmation)
+⛽️ Gas Usage Statistics
+	- Gas required for core deploy on espressoarbtest: 0.000156967 ETH
+Skipping updating chain espressoarbtest at github registry
+Now updating chain espressoarbtest at filesystem registry at /home/gulshan/.hyperlane
+Done updating chain espressoarbtest at filesystem registry
+✅ Core contract deployments complete:
+
+    staticMerkleRootMultisigIsmFactory: "0xDA320b68B008498E7592B0f086018a13956018E9"
+    staticMessageIdMultisigIsmFactory: "0xbf19A77D3C3fa6F46c5E50b80b071F6825878EE9"
+    staticAggregationIsmFactory: "0x2be0f90D4Da9fF49098D5928D20c0b316E439364"
+    staticAggregationHookFactory: "0x1bf7DEEBD9Bb3619bBA1395767A087c83FEEa45a"
+    domainRoutingIsmFactory: "0x06CD09B684aA7043813775e968A50B47f99d36b2"
+    staticMerkleRootWeightedMultisigIsmFactory: "0x9B2780Bd95C17c227f30e287732D32d712dF6286"
+    staticMessageIdWeightedMultisigIsmFactory: "0x6560D471B600dB3d11643C86e3B72DaD245E94b2"
+    proxyAdmin: "0x06CEa6f1fC84D9F70Ca7B4dAE7bbA079bCc9BFEB"
+    mailbox: "0x1E8A840aa67849b7BBef248Ef3bA29aE31d7372e"
+    interchainAccountRouter: "0x7bAf1646321be199cF279992aC5bD94A348AC9a3"
+    interchainAccountIsm: "0x28142F0d3a924dC06BF9875c09350A2B1065FB9e"
+    validatorAnnounce: "0x47B424FabE20de468aE7E7F024Db7E24341Fc16e"
+    testRecipient: "0x8B1a084f9c9D3E51bE7f2649cAE1633241e1935E"
+    merkleTreeHook: "0xF23d238875a84DC43362194fAD316A539FD09447"
+    
+Done in 29.46s.

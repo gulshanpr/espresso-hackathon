@@ -12,4 +12,3 @@ out/
 .env
 lcov.info
 output_directory
-deployments.log.txt
