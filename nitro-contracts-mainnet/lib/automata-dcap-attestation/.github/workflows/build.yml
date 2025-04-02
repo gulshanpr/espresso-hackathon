@@ -1,0 +1,43 @@
+name: Foundry Build CI/CD
+
+on: 
+    push:
+        branches: [main]
+    pull_request:
+        branches: [main]
+
+    workflow_dispatch:
+
+env:
+  DCAP_RISCZERO_IMAGE_ID: "0x83613a8beec226d1f29714530f1df791fa16c2c4dfcf22c50ab7edac59ca637f"
+
+jobs:
+  check:
+    strategy:
+      fail-fast: true
+
+    name: Foundry project
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Install Foundry
+        uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: nightly
+
+      - name: Run Forge build
+        run: |
+          forge --version
+          forge build --sizes
+        id: build
+
+      - name: Run Forge tests
+        run: |
+          forge test -vvv
+        id: test
+
+      - name: Run snapshot and Generate Summary
+        run: NO_COLOR=1 forge snapshot --gas-report >> $GITHUB_STEP_SUMMARY
