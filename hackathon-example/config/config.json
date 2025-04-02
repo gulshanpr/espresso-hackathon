@@ -1,0 +1,6 @@
+{
+    "caff_node_url": "http://127.0.0.1:8550",
+    "polling_interval": 1,
+    "value": 10,
+    "from": "0x85a883834a23181dF19dA3ffAeeE2e3A21703457"
+}
