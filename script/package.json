@@ -11,6 +11,10 @@
   },
   "dependencies": {
     "ethers": "^6.13.5",
-    "viem": "^2.24.3"
+    "express": "^5.1.0",
+    "fs": "^0.0.1-security",
+    "http-proxy-middleware": "^3.0.3",
+    "https": "^1.0.0",
+    "viem": "^2.25.0"
   }
 }
