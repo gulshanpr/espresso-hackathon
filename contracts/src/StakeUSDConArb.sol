@@ -33,6 +33,7 @@ contract USDCStaking is Ownable {
     function withdraw() external {
         Stake memory userStake = stakes[msg.sender];
         require(userStake.amount > 0, "No funds staked");
+        // first bun the minted token from espresso then let them burn
         
         delete stakes[msg.sender];
         require(usdc.transfer(msg.sender, userStake.amount), "Withdraw failed");

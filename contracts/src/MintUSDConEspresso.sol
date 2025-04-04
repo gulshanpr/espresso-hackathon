@@ -10,7 +10,7 @@ contract USDConEspresso is Ownable, ERC20 {
 
     event Mint(address indexed to, uint256 amount);
 
-    constructor(string memory name, string memory symbol) ERC20(name, symbol) Ownable(msg.sender){}
+    constructor() ERC20("USDC on Espresso", "USDC") Ownable(msg.sender){}
 
     function mintToAddress(address to, uint256 amount) external onlyOwner {
         require(to != address(0), "Invalid address");
@@ -21,3 +21,7 @@ contract USDConEspresso is Ownable, ERC20 {
         emit Mint(to, amount);
     }
 }
+
+// Deployer: 0x85a883834a23181dF19dA3ffAeeE2e3A21703457
+// Deployed to: 0x473A9A543E492663Eba729484B77D5593A0F0995
+// Transaction hash: 0x80bbb07e3e3199de7b3effeab09da100efcc92d30aa675593a9dbfa19917b4a2

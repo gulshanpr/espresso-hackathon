@@ -17,9 +17,14 @@ contract BorrowingOnEspresso is Ownable {
     }
 
     // Borrow USDC from the contract
-    function borrowUSD(address _token, uint256 _amount) external onlyOwner {
+    function borrowUSD(address _token, uint256 _amount, address _to) external onlyOwner {
         IERC20 token = IERC20(_token);
         require(token.balanceOf(address(this)) >= _amount, "Insufficient USDC in contract");
-        require(token.transfer(msg.sender, _amount), "USDC transfer failed");
+        require(token.transfer(_to, _amount), "USDC transfer failed");
     }
 }
+
+
+// Deployer: 0x85a883834a23181dF19dA3ffAeeE2e3A21703457
+// Deployed to: 0x1e3f9AF36839De4E38Ef9C07cd4e8f9b343B82Ce
+// Transaction hash: 0x114454069e5b2977cbea3209dfdc310ce896aaa41698599355da020875ae642e

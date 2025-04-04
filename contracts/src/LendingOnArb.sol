@@ -220,3 +220,5 @@ contract LendingOnArb is Ownable {
 
     // add fallback and recieve function to accept eth and usdc in the end
 }
+
+// 0x6a9CE20690c15216Fd44e8a11CeaA8F35F047bC8
